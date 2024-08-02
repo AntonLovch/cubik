@@ -1,0 +1,15 @@
+button {
+   height: 50px;
+   width: 110px;
+   background-color: #f37b7b;
+   margin: 50px;
+   border-radius: 7px;
+   border: 2px black solid;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

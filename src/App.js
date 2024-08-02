@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import Button from "./components/Button";
+import React, { useState } from 'react';
+
 
 function App() {
+
+  const [number, setNumber] = useState(null);
+
+  const images = [
+      null, 
+       require('./components/img/pic1.png'),
+        require('./components/img/pic2.png'),
+        require('./components/img/pic3.png'),
+        require('./components/img/pic4.png'),
+        require('./components/img/pic5.png'),
+        require('./components/img/pic6.png')
+  ];
+
+  function handleRoll(randomNumber) {
+      setNumber(randomNumber);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Задание - бросить кубик</h1>
+      <Button onRoll={handleRoll}/>
+      {number && <img src={images[number]} alt={`Кубик ${number}`} />}
     </div>
   );
 }
