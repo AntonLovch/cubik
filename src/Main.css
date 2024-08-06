@@ -5,11 +5,17 @@ button {
    margin: 50px;
    border-radius: 7px;
    border: 2px black solid;
+   cursor: pointer;
 }
 
 .App {
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     justify-content: center;
     align-items: center;
+}
+
+.cube {
+    display: flex;
+    flex-direction: column;
 }
